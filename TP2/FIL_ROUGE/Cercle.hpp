@@ -3,7 +3,7 @@
 
 #include "string"
 
-class Class
+class Cercle
 {
     private:
         int x;
@@ -15,7 +15,7 @@ class Class
         Cercle(int x, int y, int w, int h);
         Cercle(int x, int y, int rayon);
 
-        //std::string to_String() const;     
+        std::string to_String() const;     
 };
 
 #endif

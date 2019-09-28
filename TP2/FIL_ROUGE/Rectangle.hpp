@@ -8,14 +8,12 @@ class Rectangle
     private:
         int x;
         int y;
-        int w;
-        int h;
+        int w; //Largueur
+        int h; //Hauteur
 
     public:
         Rectangle(int x, int y, int w, int h);
-        Rectangle(int x1, int y1, int x2, int y2, int type);
-
-        //std::string to_String() const;     
+   
 };
 
 #endif
