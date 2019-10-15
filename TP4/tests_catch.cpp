@@ -39,9 +39,8 @@ TEST_CASE("Origine", "[Point]")
 }
 
 
-
-/*
-TEST_CASE("Compteur", "[Forme]") {
+TEST_CASE("Compteur", "[Forme]") 
+{
    // Pour être correct, ce test doit etre le premier sur Forme
    REQUIRE(0 == Forme::prochainId());
    Forme f1;
@@ -53,19 +52,19 @@ TEST_CASE("Compteur", "[Forme]") {
    delete p;
    REQUIRE(2 == Forme::prochainId());	
 }
-*/
 
-/*
-TEST_CASE("Instanciation1", "[Forme]") {
+TEST_CASE("Instanciation1", "[Forme]") 
+{
 	Forme f1;
 	REQUIRE(f1.getPoint().getX() == 0);
 	REQUIRE(f1.getPoint().getY() == 0);
 	REQUIRE(f1.getCouleur() ==  COULEURS::BLEU);
 }
-*/
 
-/*
-TEST_CASE("Instanciation2", "[Forme]") {
+
+
+TEST_CASE("Instanciation2", "[Forme]") 
+{
 	Forme f2;
 	
 	f2.setX(15);
@@ -78,10 +77,11 @@ TEST_CASE("Instanciation2", "[Forme]") {
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::ROUGE);
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::JAUNE);
 }
-*/
 
-/*
-TEST_CASE("Instanciation3", "[Forme]") {
+
+
+TEST_CASE("Instanciation3", "[Forme]") 
+{
     // IL N'Y A PAS D'ERREUR DANS LE TEST, CELA DOIT MARCHER	
 	Forme f2(Point(10,20), COULEURS::ROUGE);
 	REQUIRE (f2.getPoint().getX() == 10);
@@ -98,12 +98,28 @@ TEST_CASE("Instanciation3", "[Forme]") {
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::BLEU);
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::ROUGE);
 }
-*/
 
-/*
-TEST_CASE("BoiteEnglobante", "[Forme]") {
+TEST_CASE("BoiteEnglobante", "[Forme]") 
+{
 	Forme f;
 	REQUIRE (f.getLargeur() == 0);
 	REQUIRE (f.getHauteur() == 0);
 }
-*/
+/*
+TEST_CASE("Cercle", "[Cercle]") 
+{
+   int compteur = Forme::prochainId();
+   Cercle c1;
+   Cercle c2(...);
+
+   REQUIRE(c1.toString() == ".....");
+   REQUIRE(c2.toString() == ".....");
+
+   c2.setRayon(...);
+   REQUIRE(c2.getRayon()   == "..."  );
+   REQUIRE(c2.toString()   == ".....");
+   REQUIRE(c2.getLargeur() == ".....");
+   REQUIRE(c2.getHauteur() == ".....");
+
+   REQUIRE(Forme::prochainId() == (compteur+2));
+}*/

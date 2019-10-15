@@ -1,9 +1,24 @@
-#ifndef __CPP4__RECTANGLE_HPP__
-#define __CPP4__RECTANGLE_HPP__
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
 
+#include <string>
 #include "Forme.hpp"
 
-class Rectangle  {
+class Rectangle
+{
+    private:
+        int x;
+        int y;
+        int w; //Largueur
+        int h; //Hauteur
+        int ordre;
+
+    public:
+        Rectangle(int x, int y, int w, int h);
+
+        void setOrdre(int ordre);
+
+        std::string to_String() const;  
 
 };
 
