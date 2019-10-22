@@ -23,7 +23,6 @@ class Forme
         Forme(Point p1, COULEURS couleur);
         Forme(int w, int h, Point p1);
 
-
         int getLargeur();
         int getHauteur();
 
