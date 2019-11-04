@@ -1,73 +1,40 @@
+// fichier cpp pour l'utilisation officielle de la classe Chaine
+// pas pour les tests
 #include <iostream>
-#include "Forme.hpp"
-#include "Cercle.hpp"
-#include "Rectangle.hpp"
+#include "Chaine.hpp"
 
-/*
-#include "Bavarde.hpp"
-
-void test1(Bavarde b) 
+void afficherParValeur(Chaine ch)
 {
-    std::cout << "appel de fonction avec parametre objet et copie" << std::endl;
+	ch.afficher();
 }
 
-Bavarde test2a() 
+void afficherParReference(Chaine& ch)
 {
-    std::cout << "appel de fonction avec retour";
-    return Bavarde(); 
-} 
-
-Bavarde test2b() 
-{
-    Bavarde b; 
-    std::cout << "appel de fonction avec retour";
-    return b;
+	ch.afficher();
 }
 
-void test3(Bavarde& b) 
+int main(int, char**) 
 {
-    std::cout << "appel de fonction avec référence ";
-}
+	//Chaine s1;
+   	//Chaine s2(6);
+   	Chaine s3("essai");
+   	//Chaine s4(s3);
+	//Chaine s5("bizarre");
+	//Chaine s6 = s3 + s5;
+	
+	//s2 = s3;
 
-void test4(Bavarde *b) 
-{
-    std::cout << "appel de fonction avec un pointeur sur un objet";
-}
-*/
+	s3.remplacer("oups");
 
-void afficher1(Forme f) 
-{
-    std::cout << f.to_String() << std::endl;
-}
+	//s3[2] = 'v';
 
-void afficher2(Forme& f) 
-{
-    std::cout << f.to_String() << std::endl;
-}
+	//s3.afficher();
 
-void afficher3(Forme* f) 
-{
-    std::cout << f->to_String() << std::endl;
-}
+	//std::cout << "Affichage 2 : " << s3.c_str() << std::endl;
+	//std::cout << "Affichage bis : " << s6.c_str() << std::endl;
+	//std::cout << "Affichage 3 : " << s3[0] << std::endl;
 
-
-int main(int ,char**)
-{
-    /*
-    Bavarde a;
-
-    test1(a);
-    test2a();
-    test2b();
-    test3(a);
-    test4(&a);
-    */
-
-    Cercle cercle(4, 4, 2);
-
-    afficher1(cercle);
-    afficher2(cercle);
-    afficher3(&cercle);
-
-    return 0;
+	//std::cout << s3 << std::endl; //HELP
+	
+	return 0;
 }

@@ -1,28 +1,32 @@
 #include <iostream>
 #include "Bavarde.hpp"
 
-Bavarde::Bavarde(int x) : x(x)
+Bavarde::Bavarde() : _x(0)
 {
-    std::cout << "Construction de " << x << std::endl;
+    std::cout << "Construction de " << _x << std::endl;
+}
+
+Bavarde::Bavarde(int x = 0) : _x(x)
+{
+    std::cout << "Construction de " << _x << std::endl;
+}
+
+Bavarde::Bavarde(const Bavarde& b) : _x(b._x)
+{
+    std::cout << "Constructeur par recopie " << _x << std::endl;
 }
 
 Bavarde::~Bavarde()
 {
-    std::cout << "Destruction de " << x << std::endl;
+    std::cout << "Destruction de " << _x << std::endl;
 }
 
-Bavarde::Bavarde(Bavarde const& b) : x(b.x)
+int Bavarde::get_X()
 {
-    std::cout << "Constructeur par recopie de " << x << std::endl;
+    return _x;
 }
 
-
-int Bavarde::getX() const
+void Bavarde::afficher()
 {
-    return x;
-}
-
-void Bavarde::afficher() const
-{
-    std::cout << "Affichage de Bavarde " << x << std::endl;
+    std::cout << "Affichage de " << _x << std::endl;
 }

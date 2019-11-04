@@ -1,28 +1,18 @@
-#ifndef FAMILLE_H
-#define FAMILLE_H
+#ifndef FAMILLE_HPP_INCLUDED
+#define FAMILLE_HPP_INCLUDED
 
-<<<<<<< HEAD
 #include "Bavarde.hpp"
-=======
-#include "bavarde.hpp"
->>>>>>> 3871c4d11e7dca7699a62ff53d42b184b6158d03
 
 class Famille
 {
     private:
-<<<<<<< HEAD
-        Bavarde* tab;
+        Bavarde _b1;
+        Bavarde _b2;
 
     public:
-        Famille(int tailletab);
-        ~Famille();
+        Famille();
+        Famille(Bavarde b1, Bavarde b2);
+
 };
-=======
-        Bavarde* tabBav;
 
-    public:
-        Famille(int taille);
-}
->>>>>>> 3871c4d11e7dca7699a62ff53d42b184b6158d03
-
-#endif
+#endif // FAMILLE_HPP_INCLUDED

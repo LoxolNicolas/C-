@@ -1,30 +1,16 @@
-#ifndef COUPLE_H
-#define COUPLE_H
+#ifndef COUPLE_HPP_INCLUDED
+#define COUPLE_HPP_INCLUDED
 
-<<<<<<< HEAD
 #include "Bavarde.hpp"
-=======
-#include "bavarde.hpp"
->>>>>>> 3871c4d11e7dca7699a62ff53d42b184b6158d03
 
 class Couple
 {
     private:
-<<<<<<< HEAD
-        Bavarde b1;
-        Bavarde b2;
-    
-    public:
-        Couple(Bavarde b1, Bavarde b2);
-=======
-        Bavarde a;
-        Bavarde b;
+        Bavarde* _tab;
 
     public:
-        Couple();
-        Couple(Bavarde a, Bavarde b);
+        Couple(int taille);
         ~Couple();
->>>>>>> 3871c4d11e7dca7699a62ff53d42b184b6158d03
 };
 
-#endif
+#endif // COUPLE_HPP_INCLUDED

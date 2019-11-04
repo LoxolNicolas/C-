@@ -1,19 +1,21 @@
-#ifndef BAVARDE_H
-#define BAVARDE_H
+#ifndef BAVARDE_HPP_INCLUDED
+#define BAVARDE_HPP_INCLUDED
 
-class Bavarde 
+class Bavarde
 {
     private:
-        int x;
-    
+        int _x;
+
     public:
-        Bavarde(int x = 0);
-        Bavarde(Bavarde const& b);
+        Bavarde();
+        Bavarde(int x);
+        Bavarde(const Bavarde& b);
         ~Bavarde();
 
-        int getX() const;
+        int get_X();
 
-        void afficher() const;
+        void afficher();
+
 };
 
-#endif
+#endif // BAVARDE_HPP_INCLUDED

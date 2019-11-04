@@ -1,19 +1,11 @@
 #include "Famille.hpp"
 
-<<<<<<< HEAD
-Famille::Famille(int tailletab)
+Famille::Famille()
 {
-    tab = new Bavarde[tailletab];
+
 }
 
+Famille::Famille(Bavarde b1, Bavarde b2) : _b1(b1), _b2(b2)
+{
 
-Famille::~Famille()
-{
-    delete[] tab;
 }
-=======
-Famille::Famille(int taille)
-{
-    tabBav = new Bavarde[taille];
-}
->>>>>>> 3871c4d11e7dca7699a62ff53d42b184b6158d03
