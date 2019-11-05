@@ -25,10 +25,13 @@ bool Producteur::produire(int quantite, std::string nom)
 
         fichier << quantite << std::endl;
 
-        for(int i = 0; i < quantite; i++)
+        for(int i = 0; i < quantite - 1; i++)
         {
             fichier << i + 1 << std::endl;
+
         }
+
+        fichier << quantite;
 
         fichier.close();
     }

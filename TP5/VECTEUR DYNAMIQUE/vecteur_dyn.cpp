@@ -41,6 +41,7 @@ void Vecteur::setSize(int taille)
 
 void Vecteur::setTab(double* adr_tab)
 {
+    delete[] tab;
     tab = adr_tab;
 }
 
@@ -178,20 +179,19 @@ Vecteur operator+(const Vecteur& v1, const Vecteur& v2)
     v.setCapacity(v1.getCapacity() + v2.getCapacity());
     v.setSize(v1.getSize() + v2.getSize());
 
-    /*double tab_double[v1.getCapacity() + v2.getCapacity()];
+    double* tab_double = new double[v1.getCapacity() + v2.getCapacity()];
 
     for(int i = 0; i < v1.getSize(); i++)
     {
-        tab_double[i] = *(v1.getTab() + i);        
+        tab_double[i] = *(v1.getTab() + i);
     }
 
-    for(int i = v1.getSize(); i < v2.getSize(); i++)
+    for(int i = v1.getSize(); i < v.getSize(); i++)
     {
-        tab_double[i] = *(v2.getTab() + i);
+        tab_double[i] = *(v2.getTab() + (i - 3));
     }
     
-    v.setTab();
-    */
+    v.setTab(tab_double);
 
     return v;
 }

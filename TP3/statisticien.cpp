@@ -13,7 +13,6 @@ int Statisticien::acquerir(std::string nom)
     
     int nb;
     int somme = 0;
-    int i = 0;
 
     fichier.open(nom.c_str());
 
@@ -23,13 +22,13 @@ int Statisticien::acquerir(std::string nom)
 
         fichier >> nb;
 
-        while(!fichier.eof() && i < nb)
+        while(!fichier.eof())
         {
             int lecture;
 
             fichier >> lecture;
 
-            i++;
+            std::cout << lecture << std::endl;
 
             somme += lecture;
         }
