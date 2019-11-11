@@ -18,11 +18,11 @@ class Forme
         static int nbFormes;
         
     public:
-    	   Forme();
-    	   Forme(Point p, COULEURS c);
-    	   Forme(Point p, int w, int h);
+    	Forme();
+    	Forme(Point p, COULEURS c);
+    	Forme(Point p, int w, int h);
     	   
-    	   virtual ~Forme();
+    	virtual ~Forme();
     	   
         COULEURS getCouleur() const;
         void setCouleur(COULEURS c);
@@ -36,7 +36,9 @@ class Forme
         int getId() const;
         static int prochainId();
         
-        virtual std::string toString() const = 0;     
+        virtual std::string toString() const = 0;
+
+        virtual Forme* copie() const = 0;
 };
 
 #endif // FORME_HPP_INCLUDED

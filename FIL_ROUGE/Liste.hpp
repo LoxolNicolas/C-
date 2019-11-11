@@ -9,7 +9,7 @@
 
 const int TAILLE_TAB = 5;
 
-class Liste
+class Liste : public Forme
 {
     private:
         Forme* tab_f[TAILLE_TAB];
@@ -24,6 +24,8 @@ class Liste
 
         int getCompteur() const;
         std::string toString() const;
+
+        virtual Forme* copie() const override;
 };
 
 #endif // LISTE_HPP_INCLUDED

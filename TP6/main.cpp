@@ -2,7 +2,7 @@
 
 class M 
 {
-  public:
+    public:
     M()
     {
       std::cout << "M::M()" << std::endl;

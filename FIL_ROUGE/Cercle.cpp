@@ -43,3 +43,8 @@ std::string Cercle::toString() const
 {
     return "Cercle " + patch::to_string(_p.getX()) + " " +  patch::to_string(_p.getY()) + " " + patch::to_string(_w) + " " + patch::to_string(_h) + "\n";
 }
+
+Forme* Cercle::copie() const
+{
+    return new Cercle(_p.getX(), _p.getY(), this->getLargeur(), this->getHauteur());
+}

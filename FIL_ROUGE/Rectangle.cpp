@@ -27,3 +27,8 @@ std::string Rectangle::toString() const
 {
     return "Rectangle " + patch::to_string(_p.getX()) + " " +  patch::to_string(_p.getY()) + " " + patch::to_string(_w) + " " + patch::to_string(_h) + "\n";
 }
+
+Forme* Rectangle::copie() const
+{
+    return new Rectangle(_p.getX(), _p.getY(), this->getLargeur(), this->getHauteur());
+}

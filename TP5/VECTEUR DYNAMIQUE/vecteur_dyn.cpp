@@ -1,30 +1,44 @@
 #include "vecteur_dyn.hpp"
 #include <iostream>
 
-Vecteur::Vecteur(int cap) : capacite(cap), taille_act(0), tab(new double[capacite])
+Vecteur::Vecteur(int cap) : capacite(cap), taille_act(0), tab(nullptr)
 {
-    for (int i = 0; i < capacite; i++)
+    try
     {
-        tab[i] = 0;
+        tab = new double[capacite];
+
+        if(tab == nullptr)
+        {
+            throw ErreurAlloc();
+        }
+
+        for(int i = 0; i < capacite; i++)
+        {
+            tab[i] = 0;
+        }
+    }
+    catch(const ErreurAlloc& e)
+    {
+        std::cerr << e.what(capacite);
     }
 }
 
-Vecteur::~Vecteur()
+Vecteur::~Vecteur() noexcept
 {
     delete[] tab;
 }
 
-int Vecteur::getCapacity() const
+int Vecteur::getCapacity() const noexcept
 {
     return capacite;
 }
 
-int Vecteur::getSize() const
+int Vecteur::getSize() const noexcept
 {
     return taille_act;
 }
 
-double* Vecteur::getTab() const
+double* Vecteur::getTab() const noexcept
 {
     return tab;
 }
@@ -45,12 +59,12 @@ void Vecteur::setTab(double* adr_tab)
     tab = adr_tab;
 }
 
-bool Vecteur::estVide() const
+bool Vecteur::estVide() const noexcept
 {
     return (taille_act == 0);
 }
 
-bool Vecteur::estPlein() const
+bool Vecteur::estPlein() const noexcept
 {
     return (taille_act == capacite);
 }
@@ -140,7 +154,7 @@ void Vecteur::pop_front()
     }  
 }
 
-void Vecteur::affiche() const
+void Vecteur::affiche() const noexcept
 {
     for(int i = 0; i < taille_act; i++)
     {
@@ -152,8 +166,7 @@ double& Vecteur::operator[](int index)
 {
     if(index < 0 || index >= taille_act)
     {
-        std::cerr << "Mauvais index" << std::endl;
-        std::exit(1);
+        throw ErreurBorne();
     }
 
     return tab[index];

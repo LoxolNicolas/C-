@@ -14,6 +14,8 @@ class Rectangle : public Forme
         virtual ~Rectangle();
 
         virtual std::string toString() const override;
+
+        virtual Forme* copie() const override;
 };
 
 #endif // RECTANGLE_HPP_INCLUDED

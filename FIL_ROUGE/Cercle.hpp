@@ -19,6 +19,8 @@ class Cercle : public Forme
         void setRayon(int rayon);
 
         virtual std::string toString() const override;
+
+        virtual Forme* copie() const override;
 };
 
 #endif // CERCLE_HPP_INCLUDED

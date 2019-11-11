@@ -58,3 +58,15 @@ std::string Liste::toString() const
 
     return res;
 }
+
+Forme* Liste::copie() const
+{
+    Liste* l = new Liste();
+
+    for(int i = 0; i <= nb_forme; i++)
+    {
+        l->Ajouter_Forme(*(tab_f[i]));
+    }
+    
+    return l;
+}

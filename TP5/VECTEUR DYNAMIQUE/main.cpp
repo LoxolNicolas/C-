@@ -3,9 +3,7 @@
 
 int main(int, char**)
 {
-    Vecteur v1;
-    Vecteur v2;
-
+    /*
     for(int i = 0; i < 3; i++)
     {
         v1.push_back(i);
@@ -26,6 +24,7 @@ int main(int, char**)
     //std::cout << v3.getSize() << std::endl;
     
     v3.affiche();
+    */
 
 
 
