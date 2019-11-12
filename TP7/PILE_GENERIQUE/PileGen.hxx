@@ -1,5 +1,3 @@
-#include "Pile_Gen.hpp"
-
 template<typename T>
 Pile_Gen<T>::Pile_Gen(int capacite) : tab(nullptr), _taille(0), _capacite(capacite)
 {

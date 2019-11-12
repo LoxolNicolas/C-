@@ -24,6 +24,9 @@ class Pile_Gen
         void afficher() const;
 };
 
+#include "PileGen.hxx"
+
+/*
 template<typename T>
 Pile_Gen<T>::Pile_Gen(int capacite) : tab(nullptr), _taille(0), _capacite(capacite)
 {
@@ -96,5 +99,6 @@ void Pile_Gen<T>::afficher() const
         std::cout << tab[i] << std::endl;
     }
 }
+*/
 
 #endif
